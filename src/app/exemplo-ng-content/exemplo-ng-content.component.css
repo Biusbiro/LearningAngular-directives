@@ -1,0 +1,20 @@
+.panel{
+    padding: 5px;
+    background-color: aliceblue;
+}
+
+.panel-default{
+    padding: 5px;
+    background-color: rgb(201, 203, 204);
+}
+
+.panel-heading{
+    padding: 10px;
+    background-color: rgb(92, 92, 92);
+    color: beige
+}
+
+.panel-body{
+    padding: 10px;
+    background-color: darkgray(92, 92, 92);
+}

@@ -1,0 +1,44 @@
+<div class="w3-bar w3-black">
+  <a href="#" (click)="aba = 'ngSwitch'" [class.active]="aba == 'ngSwitch'" class="w3-bar-item w3-button active">ngSwitch</a>
+  <a href="#" (click)="aba = 'ngIf'" [class.active]="aba == 'ngIf'" class="w3-bar-item w3-button">ngIf</a>
+  <a href="#" (click)="aba = 'ngFor'" [class.active]="aba == 'ngFor'" class="w3-bar-item w3-button">ngFor</a>
+  <a href="#" (click)="aba = 'ngClass'" [class.active]="aba == 'ngClass'" class="w3-bar-item w3-button">ngClass</a>
+  <a href="#" (click)="aba = 'ngStyle'" [class.active]="aba == 'ngStyle'" class="w3-bar-item w3-button">ngStyle</a>
+  <a href="#" (click)="aba = 'operadorElvis'" [class.active]="aba == 'operadorElvis'" class="w3-bar-item w3-button">operador Elvis</a>
+  <a href="#" (click)="aba = 'ngContent'" [class.active]="aba == 'ngContent'" class="w3-bar-item w3-button">ngContent</a>
+</div>
+
+<div class="container" [ngSwitch]="aba">
+  <div *ngSwitchCase="'ngSwitch'">
+    <p>Using top menu to show specific content</p>
+  </div>
+  <div *ngSwitchCase="'ngIf'">
+    <p>Tests with *ngIf</p>
+    <app-diretiva-ngif></app-diretiva-ngif>
+  </div>
+  <div *ngSwitchCase="'ngFor'">
+    <p>Tests with *ngFor</p>
+    <app-diretiva-ngfor></app-diretiva-ngfor>
+  </div>
+  <div *ngSwitchCase="'ngClass'">
+    <p>Tests with *ngClass</p>
+    <app-diretiva-ngclass></app-diretiva-ngclass>
+  </div>
+  <div *ngSwitchCase="'ngStyle'">
+    <p>Tests with ngclass</p>
+    <app-diretiva-ngstyle></app-diretiva-ngstyle>
+  </div>
+  <div *ngSwitchCase="'operadorElvis'">
+    <p>Tests with Operador Elvis</p>
+    <app-operador-elvis></app-operador-elvis>
+  </div>
+  <div *ngSwitchCase="'ngContent'">
+    <p>Tests with ngContent</p>
+    <app-exemplo-ng-content>
+      <div>teste</div>
+      <app-operador-elvis></app-operador-elvis>
+    </app-exemplo-ng-content>
+  </div>
+</div>
+
+

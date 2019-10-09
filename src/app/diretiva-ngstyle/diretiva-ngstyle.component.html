@@ -1,0 +1,20 @@
+<button
+  [style.backgroundColor]="ativo ? 'blue' : 'grey'"
+  [style.color]="ativo ? 'white' : 'black'"
+  [style.fontWeight]="ativo ? 'bold' : 'normal'"
+  [style.fontSize]="sizeFont + 'px'"
+  (click)="changeActive()"
+>Change Attribute</button>
+
+<input type="text" [(ngModel)]="sizeFont">
+
+<h5>ngStyle</h5>
+<button
+  [ngStyle]="{
+    'backgroundColor': (ativo ? 'blue' : 'grey'),
+    'color': (ativo ? 'white' : 'black'),
+    'fontWeight': (ativo ? 'bold' : 'normal'),
+    'fontSize': sizeFont + 'px'
+  }"
+  (click)="changeActive()"
+>Change Attribute</button>
